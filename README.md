@@ -17,4 +17,28 @@ In their research-based overviews of text summarizing systems, several authors h
 
 - **Informative summarization**: Informative summarization systems provide a brief version that may stand in for the original document. Here, you can find a publicly-accessible English dataset where the input is the first paragraphs of Wikipedia articles and the output is the corresponding Wikidata description.
 
-- **Two-phase summarization approaches**
+## Two-phase summarization approaches
+
+To further enhance the generation performance afforded by contrastive learning and beam search, the researchers use a two-phase summarization strategy consisting of description generation and candidate ranking. Consequently, the summary task is less "severe" since the resulting descriptions capture more of the essential information from paragraphs.
+
+## The Main Contributions
+
+- **Dataset creation**: For anyone interested in researching Wikipedia summarization, researchers have made a dataset available on GitHub.
+Setting up a trending approach: To enhance the caliber of the generated summaries, they use a two-stage summary strategy, consisting of description generation and candidate ranking.
+
+- **Sentiment correlation**: They measure the correlations of the generated descriptions versus the paragraphs and the gold descriptions by comparing their sentiment polarities on cumulative distribution and the Kolmogorov-Smirnov test.
+
+## Related Works
+
+Here we describe current datasets and deep learning algorithms for text summarization, not only in wiki text but in various areas. Some noteworthy methods for incorporating sentiment analysis into text summarizing are also described.
+
+### Datasets Extracted from Wikipedia and Wikidata
+
+- Datasets may be either monolingual or multilingual, and both gather information from Wikipedia and Wikidata in the form of articles and knowledge graphs represented as RDF triples. Since millions of editors worked together to create the English Wikipedia, it is the language most often used for monolingual datasets. Another argument is that, as Wikipedia is available in up to 327 different languages, multilingual datasets accurately reflect the encyclopedia's multilingual strength. Monolingual datasets are built from several popular languages, of which English and German are two typical examples.
+- To create a dataset in English, Anjalie et al. collected 14.4M articles with section titles and their content. The purpose of the summary task is to build a title out of the content in a specific section.
+- A substantial corpus of 240,000 texts from the German Wikipedia was gathered by [Frefel](https://aclanthology.org/2020.lrec-1.821.pdf). The first paragraph of each article was considered as a summary, while the remaining content as an actual document.
+- WIKIREF is a large query-focused summarization dataset collected from Wikipedia articles by [Haichao et al](https://arxiv.org/abs/1911.03324). The dataset contains more than 280,000 examples. The information synthesis approach used by Wikipedia editors is useful to this study.
+
+Some monolingual datasets have multi-document summarization (MDS). A new heterogeneous and multi-genre corpus for MDS was suggested by [Zopf et al](https://aclanthology.org/C16-1145.pdf). The same author improved upon this paper by creating auto-MDS, a multilingual multi-document summarization (MMS) dataset.
+
+
