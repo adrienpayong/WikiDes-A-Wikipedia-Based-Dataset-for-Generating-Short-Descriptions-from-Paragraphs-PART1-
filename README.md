@@ -117,4 +117,22 @@ Sentiment analysis is integrated into text summarization models to better captur
 
 ## Data creation
 
+JSON data were gathered using the APIs of Wikidata and English Wikipedia. To counteract the use of topic bias in WikiDes, Algorithm 1 randomly selects samples. To determine the topic of Wikidata items, the researchers look at their is-a or instance-of attribute. Because there are no related articles in Wikipedia, they remove the Wikidata items for the following topics:
+
+- Scholarly article
+- Wikimedia disambiguation page
+- Wikinews article
+
+### Description of the Algorithm
+
+- A while loop is used to get output samples S, where N is the required number of samples.
+- An id between 1 and 99 million is created at random for each iteration.
+- If the id is not found in list K, then you should proceed to gather data from Wikidata and Wikipedia to build a sample.
+- The sample is then checked for validity using criteria such as paragraph and description lengths.
+- If it's a representative sample, put it in S. Otherwise, the algorithm will keep iterating through the while loop until the total number of samples, S, is equal to the input value, N.
+- For each item in Wikidata, the crawler extracts a label, a short description, instances, and a site link or interwiki link. This link leads to an article in English Wikipedia, where the crawler can gather the first paragraph.
+- Because it is expected that special symbols and unnecessary spaces do not significantly contribute to the model performance during description generation, the researchers apply a few pre-processing techniques to paragraphs and descriptions to eliminate them. Samples with empty descriptions or paragraphs with less than 10 tokens are also thrown out.
+
+![source](https://github.com/adrienpayong/object-detection/blob/main/algo.png)
+
 
