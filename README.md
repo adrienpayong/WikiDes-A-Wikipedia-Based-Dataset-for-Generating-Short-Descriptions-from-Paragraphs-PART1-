@@ -135,4 +135,24 @@ JSON data were gathered using the APIs of Wikidata and English Wikipedia. To cou
 
 ![source](https://github.com/adrienpayong/object-detection/blob/main/algo.png)
 
+- Articles that redirect to a representative article that doesn't cover the same subject in its first paragraph are removed.
+- The researchers use the package NLTK punkt to extract the first sentences from the first paragraphs. Since they needed to access APIs online, they set the crawler's max workers to 8 to increase its throughput. 
+- The dataset for this research was collected in less than 72 hours, and it contains 81,418 English samples over 6,987 topics.
+
+## The Research Objective
+
+Figure 1 depicts a typical sample, which consists of the Wikidata description "river system in North America" and the first paragraph of the related Wikipedia article: "The Mississippi River is the second-longest river and chief river of the second largest drainage system in North America…" The goal of the challenge is to generate this description using the provided paragraph.
+
+![source](https://github.com/adrienpayong/object-detection/blob/main/objective.PNG)
+
+## Conclusion
+
+In this paper, we introduced WikiDes, a novel summarization dataset with over 80k samples on 6987 topics created by collecting data from Wikipedia and Wikidata. The dataset aims to produce short descriptions
+from the given paragraphs. We have described current datasets and deep learning algorithms for text summarization, not only in wiki text but in various domains. Some noteworthy methods for incorporating sentiment analysis into text summarizing were also described. In the next article, we will explain how analyses on WikiDes were performed.
+
+## Reference
+
+Wikipedia-Based Dataset for Generating Short Descriptions
+from Paragraphs: https://arxiv.org/pdf/2209.13101v1.pdf
+
 
