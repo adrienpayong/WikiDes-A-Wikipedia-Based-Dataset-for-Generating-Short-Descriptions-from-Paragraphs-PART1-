@@ -96,7 +96,7 @@ This enables researchers to broaden their training on text summarization dataset
 To enhance the quality of the output texts, [Liu and Liu](https://arxiv.org/abs/2106.01890) used BART and RoBERTa in a two-phase summarization process to build and score candidate summaries that were produced using [diverse beam search](https://arxiv.org/abs/1610.02424).
 Two-phase summarization's strength resides in its decoding technique, which makes use of beam search and other superior methods such as [nucleus sampling]( https://arxiv.org/abs/1904.09751) where diverse data creates more opportunities to search for an "ideal" candidate. In one of the most recent works, [Liu et al.](https://aclanthology.org/2022.acl-long.207/) followed a new training paradigm that assigns probabilities of candidate summaries concerning to their quality in contrastive learning. Different summarizing works using contrastive learning have been done. In addition, there are different approaches, including:
 
-- [few-shot and zero-shot learning](https://dl.acm.org/doi/abs/10.1016/j.csl.2021.101276=
+- [few-shot and zero-shot learning](https://dl.acm.org/doi/abs/10.1016/j.csl.2021.101276)
 - [reinforcement learning](https://dl.acm.org/doi/abs/10.1016/j.csl.2021.101276)
 - [prompting](https://arxiv.org/abs/2107.06955)
 - [prefix-tuning on massive-scale models (GTP-2)](https://arxiv.org/abs/2101.00190)
@@ -105,6 +105,16 @@ Two-phase summarization's strength resides in its decoding technique, which make
 ### Sentiment Analysis in Text Summarization
 
 The purpose of a conventional and ideal summary is to convey the most important points of a document. However, the document's emotional tone, which is essential in datasets like IMDB's movie reviews, may be missing.
-Sentiment analysis is integrated into text summarization models to better capture sentiment. Extracting negative, neutral, and positive sentiment polarity from texts is one method of integration that enables us to turn sentiment analysis into a problem of text sentiment classification
+Sentiment analysis is integrated into text summarization models to better capture sentiment. Extracting negative, neutral, and positive sentiment polarity from texts is one method of integration that enables us to turn sentiment analysis into a problem of text sentiment classification.
+
+- Aspect-based sentiment summarization (ABSA) is another method for integrating sentiment analysis into text summary; it consists of two tasks: aspect identification with mention extraction and sentiment classification.
+- A concept called Aspect-based Opinion Summarization (AOS) was mentioned by [Wu et al.](https://arxiv.org/abs/1511.09128) which performs the same functions as ASBA.
+- [Titov and McDonald](https://aclanthology.org/P08-1036/) proposed a joint model of text and aspect ratings which use the Multi-Aspect Sentiment model (MAS) to form representative aspects as topics and a set of sentiment predictors to illustrate topic-aspect correlations.
+- In another work, [Dhanush et al.](https://www.ijert.org/aspect-based-sentiment-summarization-with-deep-neural-networks) designed an RNN for extracting aspects with contexts in a sentence and a CNN for sentiment classification at the sentence level.
+- [Nishikawa et al.](https://aclanthology.org/P10-2060/) addressed informativeness and readability in restaurant reviews. They set up an algorithm to create a summary by choosing and arranging sentences by informativeness and readability scores.
+- Since many texts in WikiDes are neutral due to Wikipedia's neutrality policy, researchers use cumulative distribution and the [Kolmogorov-Smirnov test](https://r-forge.r-project.org/scm/viewvc.php/*checkout*/pkg/literature/1951-jamsta-massey-kolmsmirntest.pdf?root=glogis) to establish whether or not descriptions and paragraphs share a similar sentiment polarity rather than relying on sentiment summarization methods.
+- The Kolmogorov-Smirnov test is not the only approach for comparing distributions across multiple sets; the [chi-squared test](https://floppybunny.org/robin/web/virtualclassroom/stats/basics/articles/chi_square/chi_square_review_plackett_1983.pdf), the [Mann-Whitney U test](https://onlinelibrary.wiley.com/doi/abs/10.1002/9780470479216.corpsy0524), and the Fisher's z-test are other valid alternatives.
+
+## Data creation
 
 
