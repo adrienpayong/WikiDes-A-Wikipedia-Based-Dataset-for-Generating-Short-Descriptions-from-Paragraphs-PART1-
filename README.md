@@ -64,4 +64,19 @@ The Document Understanding Conference (DUC) and the Text Analysis Conference (TA
 - **BIGPATENT**: [BIGPATENT](https://aclanthology.org/P19-1212/)) contains 1.3 million records of U.S. patent documents and human-written abstractive summaries.
 - **Multi-XScience**: [Multi-XScience](https://arxiv.org/abs/2010.14235) is also a large-scale MDS dataset collected from scientific articles. It brings a challenge for the MDS task: given a paper, generate a related-work section from the paper abstract and the abstracts of reference pieces.
 
+## Deep Learning Approaches for Text Summarization
+
+Since its inception, text summarization has been an established NLP task, inspiring various solutions to the challenges it presents. Some well-known approaches include: Statistical-based approaches, topic-based approaches:
+
+- [LSA](https://www.researchgate.net/publication/220017752_Using_Latent_Semantic_Analysis_in_Text_Summarization_and_Summary_Evaluation)
+- [topic themes](https://dl.acm.org/doi/10.1145/1076034.1076071)
+
+graphs-based approaches:
+
+- [LexRank](https://arxiv.org/abs/1109.2128)
+- [TextRank](https://aclanthology.org/W04-3252/)
+- [Opinosis](https://aclanthology.org/C10-1039/)
+- [GraphSum](https://core.ac.uk/download/pdf/76522123.pdf)
+- [Approaches based on machine learning](https://dl.acm.org/doi/10.1007/s10462-016-9475-9)
+
 
