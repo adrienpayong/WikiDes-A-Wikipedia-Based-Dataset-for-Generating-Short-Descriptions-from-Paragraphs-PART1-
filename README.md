@@ -93,11 +93,11 @@ This enables researchers to broaden their training on text summarization dataset
 To enhance the quality of the output texts, [Liu and Liu](https://arxiv.org/abs/2106.01890) used BART and RoBERTa in a two-phase summarization process to build and score candidate summaries that were produced using [diverse beam search](https://arxiv.org/abs/1610.02424).
 Two-phase summarization's strength resides in its decoding technique, which makes use of beam search and other superior methods such as [nucleus sampling]( https://arxiv.org/abs/1904.09751) where diverse data creates more opportunities to search for an "ideal" candidate. In one of the most recent works, [Liu et al.](https://aclanthology.org/2022.acl-long.207/) followed a new training paradigm that assigns probabilities of candidate summaries concerning to their quality in contrastive learning. Different summarizing works using contrastive learning have been done. In addition, there are different approaches, including:
 
-- [few-shot and zero-shot learning](https://dl.acm.org/doi/abs/10.1016/j.csl.2021.101276)
-- [reinforcement learning](https://dl.acm.org/doi/abs/10.1016/j.csl.2021.101276)
-- [prompting](https://arxiv.org/abs/2107.06955)
-- [prefix-tuning on massive-scale models (GTP-2)](https://arxiv.org/abs/2101.00190)
-- hybrid approaches
+1- [few-shot and zero-shot learning](https://dl.acm.org/doi/abs/10.1016/j.csl.2021.101276)
+2- [reinforcement learning](https://dl.acm.org/doi/abs/10.1016/j.csl.2021.101276)
+3- [prompting](https://arxiv.org/abs/2107.06955)
+4- [prefix-tuning on massive-scale models (GTP-2)](https://arxiv.org/abs/2101.00190)
+5- hybrid approaches
 
 ### Sentiment Analysis in Text Summarization
 
