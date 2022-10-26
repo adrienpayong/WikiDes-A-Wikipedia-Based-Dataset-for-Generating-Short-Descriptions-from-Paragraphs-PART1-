@@ -79,4 +79,32 @@ graphs-based approaches:
 - [GraphSum](https://core.ac.uk/download/pdf/76522123.pdf)
 - [Approaches based on machine learning](https://dl.acm.org/doi/10.1007/s10462-016-9475-9)
 
+- **Encode-decoder architectures**: Various deep learning techniques use encoder-decoder architectures for summarization tasks. In abstractive summarization, an attention-based encoder-decoder model was employed by [Alexander M. et al.](https://aclanthology.org/D15-1044.pdf) and [Ramesh et al.](https://aclanthology.org/K16-1028.pdf) Reproduction of inaccurate factual facts and repeated text chunks are two common problems that arise when using a neural sequence-to-sequence model.
+
+- To address these issues, [See et al.](https://aclanthology.org/P17-1099/) proposed a pointer-generator network (PGN) to point to copy words from the source documents, which would aid in the reproduction of accurate information and help to prevent unnecessary repetition when keeping track of the sentences discussed in the document.
+- **Gated Recurrent Unit(GRU)** recurrent neural network-based (RNN): Ramesh et al. introduced a two-layer bidirectional Gated Recurrent Unit (GRU) recurrent neural network-based (RNN) classifier to generate the extractive summary according to the content richness of each sentence and saliency according to the overall document.
+- **convolutional neural networks(CNN)**: With the use of convolutional neural networks, [Narayanet al.](https://arxiv.org/abs/1808.08745) developed a topic-conditioned neural model (CNN). Convolution layers, in contrast to RNNs, are better at preserving long-range dependencies between words and enabling inference, abstraction, and paraphrasing at the document level.
+- Transformers:[Transformers](https://aclanthology.org/2020.emnlp-demos.6.pdf) has emerged as a powerful tool for building high-capacity models using transformer architecture and applying pretraining to a wide range of natural language processing (NLP) tasks, including text summarization. This library provides various pre-trained models for text summarizing, including:
+
+- [BERT](https://arxiv.org/abs/1903.10318)
+- [BART](https://arxiv.org/abs/1910.13461)
+- [T5](https://arxiv.org/pdf/1910.10683.pdf)
+- [PEGASUS](https://arxiv.org/pdf/1912.08777.pdf)
+
+This enables researchers to broaden their training on text summarization datasets beyond academia and into the industry. Some works used transfer learning from these pre-trained models to do downstream tasks, rather than spending additional effort training datasets. Shusheng et al. used contrastive learning in summarization tasks by maximizing the similarities of the same semantic meaning articles.
+
+To enhance the quality of the output texts, [Liu and Liu](https://arxiv.org/abs/2106.01890) used BART and RoBERTa in a two-phase summarization process to build and score candidate summaries that were produced using [diverse beam search](https://arxiv.org/abs/1610.02424).
+Two-phase summarization's strength resides in its decoding technique, which makes use of beam search and other superior methods such as [nucleus sampling]( https://arxiv.org/abs/1904.09751) where diverse data creates more opportunities to search for an "ideal" candidate. In one of the most recent works, [Liu et al.](https://aclanthology.org/2022.acl-long.207/) followed a new training paradigm that assigns probabilities of candidate summaries concerning to their quality in contrastive learning. Different summarizing works using contrastive learning have been done. In addition, there are different approaches, including:
+
+- [few-shot and zero-shot learning](https://dl.acm.org/doi/abs/10.1016/j.csl.2021.101276=
+- [reinforcement learning](https://dl.acm.org/doi/abs/10.1016/j.csl.2021.101276)
+- [prompting](https://arxiv.org/abs/2107.06955)
+- [prefix-tuning on massive-scale models (GTP-2)](https://arxiv.org/abs/2101.00190)
+- hybrid approaches
+
+### Sentiment Analysis in Text Summarization
+
+The purpose of a conventional and ideal summary is to convey the most important points of a document. However, the document's emotional tone, which is essential in datasets like IMDB's movie reviews, may be missing.
+Sentiment analysis is integrated into text summarization models to better capture sentiment. Extracting negative, neutral, and positive sentiment polarity from texts is one method of integration that enables us to turn sentiment analysis into a problem of text sentiment classification
+
 
