@@ -2,9 +2,7 @@
 
 ## Introduction
 
-The process of text summarizing entails reducing a lengthy document to its important points. The task can be monolingual or cross-lingual. The monolingual task has been handled for languages other than English. A dataset is build  by matching a document with a summary; the length of each might vary depending on the intended use. Free online resources like Wikipedia and Wikidata provide large-size and diversified material to collect information for summarizing tasks. Wikidata entries are distinguished from one another by a brief description phrase that serves to differentiate across entries with the same or similar labels. We observe a high correlation between Wikidata descriptions and Wikipedia articles, especially in the first paragraphs.
-
-Thus, we want to create a unique dataset called WikiDes to generate short descriptions as summaries from the irst paragraphs as document. WikiDes is a monolingual dataset with over 80k English samples with 6987 instances as topics, extracted data from both Wikipedia and Wikidata.
+The process of text summarizing entails reducing a lengthy document to its important points. The task can be monolingual or cross-lingual. The monolingual task has been handled for languages other than English. A dataset is build  by matching a document with a summary; the length of each might vary depending on the intended use. Free online resources like Wikipedia and Wikidata provide large-size and diversified material to collect information for summarizing tasks. Wikidata entries are distinguished from one another by a brief description phrase that serves to differentiate across entries with the same or similar labels. We observe a high correlation between Wikidata descriptions and Wikipedia articles, especially in the first paragraphs. Thus, we want to create a unique dataset called WikiDes to generate short descriptions as summaries from the first paragraphs as document. WikiDes is a monolingual dataset with over 80k English samples with 6987 instances as topics, extracted data from both Wikipedia and Wikidata.
 
 ## Why WikiDes ?
 
